@@ -1,6 +1,5 @@
-import Hello from './Hello';
+import Website from './Website';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<Hello/>, document.getElementById('reactEntry'));
-
+ReactDOM.render(<Website/>, document.getElementById('reactEntry'));
