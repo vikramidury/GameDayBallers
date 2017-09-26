@@ -21,5 +21,25 @@ def home():
     """Return a friendly HTTP greeting."""
     return render_template("index.html")
 
+@app.route('/players')
+def players():
+    """Return a friendly HTTP greeting."""
+    return render_template("player.html")
+
+@app.route('/teams')
+def teams():
+    """Return a friendly HTTP greeting."""
+    return render_template("team.html")
+
+@app.route('/coaches')
+def coaches():
+    """Return a friendly HTTP greeting."""
+    return render_template("coach.html")
+
+@app.route('/pre-nba')
+def pre_nba():
+    """Return a friendly HTTP greeting."""
+    return render_template("pre-nba.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
