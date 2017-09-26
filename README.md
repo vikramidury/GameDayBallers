@@ -4,39 +4,28 @@
 1. Install the [App Engine Python SDK](https://developers.google.com/appengine/downloads).
 You'll need python 2.7 and [pip 1.4 or later](http://www.pip-installer.org/en/latest/installing.html) installed too.
 
-2. Clone this repo with
-
-   ```
-   git clone https://github.com/AxoSal/GAE-Flask-React-skeleton.git
-   ```
-3. Install Python dependencies in the project's lib directory and install Node dev dependencies.
+2. Install Python dependencies in the project's lib directory and install Node dev dependencies.
    Note: App Engine can only import libraries from inside your project directory.
 
    ```
-   cd GAE-Flask-React-skeleton
+   virtualenv env
+   source env/bin/activate
    pip install -r requirements.txt -t lib
    npm install
    ```
-   
-5. Run 
+
+3. Run
    ```
    webpack --watch
    ```
-   from comand line so that you can `require` your components and compile .jsx files to .js.
-   
+   from command line so that you can `require` your components and compile .jsx files to .js.
+
 4. Run local server from the command line:
 
    ```
-   dev_appserver.py .
+   dev_appserver.py app.yaml
    ```
    Visit the application [http://localhost:8080](http://localhost:8080)
-
-   or
-
-   ```
-   python main.py
-   ```
-   And visit the application on [http://localhost:5000](http://localhost:5000)
 
 
 See [the development server documentation](https://developers.google.com/appengine/docs/python/tools/devserver)
@@ -51,7 +40,7 @@ To deploy the application:
    application](https://developers.google.com/appengine/docs/python/tools/uploadinganapp) with
 
    ```
-   appcfg.py -A <your-project-id> update app.yaml
+
    ```
 1. Congratulations!  Your application is now live at your-app-id.appspot.com
 
